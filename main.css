@@ -1,0 +1,109 @@
+body {
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), no-repeat center / cover url(calcBack.jpeg);
+}
+
+#container {
+	text-align: center;
+}
+
+#outputWindow {
+	color: #2cb359;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 8vh;
+	content: "";
+
+	height: 10vh;
+	width: 100%;
+	display: block;
+	margin: 1vh 0 2vh 0;
+}
+
+#grid {
+	position: relative;
+	width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.clear::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#grid li * {
+	visibility: visible;
+}
+
+#grid li {
+	list-style-type: none;
+	position: relative;
+	float: left;
+	background-color: black;
+	width: 12.85714285714286%;
+	padding: 0 0 14.87860145166612% 0;
+	transform: rotate(-60deg) skewY(30deg);
+	overflow: hidden;
+	visibility: hidden;
+}
+
+#grid li .hexagon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #2cb359;
+	transform: skewY(-30deg) rotate(60deg);
+	overflow: hidden;
+}
+
+#grid li:nth-child(1n + 1) {
+	margin: 0.5%;
+}
+
+#grid li:nth-child(14n + 8),
+#grid li:nth-child(14n + 9),
+#grid li:nth-child(14n + 10),
+#grid li:nth-child(14n + 11),
+#grid li:nth-child(14n + 12),
+#grid li:nth-child(14n + 13),
+#grid li:nth-child(14n + 14) {
+	margin-top: -2.9285714285%;
+	margin-bottom: -2.9285714285%;
+	transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+#grid li:nth-child(14n + 8) {
+	margin-left: 1%;
+}
+
+button:focus {
+	outline: none;
+}
+
+#grid li .hexagon:hover {
+	color: #ffffff;
+	background: none;
+}
+
+#grid li .hexagon:nth-child() {
+	visibility: hidden;
+}
+
+.invis {
+	display: none;
+}
+
+.hexagon {
+	margin: 0;
+	position: absolute;
+	font-size: 4vw;
+	border: none;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
