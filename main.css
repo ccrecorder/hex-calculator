@@ -87,6 +87,7 @@ button:focus {
 #grid li .hexagon:hover {
 	color: #ffffff;
 	background: none;
+	transition: all 0.5s ease;
 }
 
 #grid li .hexagon:nth-child() {
